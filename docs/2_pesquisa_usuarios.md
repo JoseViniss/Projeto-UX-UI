@@ -24,19 +24,17 @@ Para cada instrumento, apresente:
 
 ## Exemplo de entrega
 
-> O exemplo abaixo é fictício — usa como cenário um app universitário de organização de grupos de estudo ("Estuda+") apenas para ilustrar o **nível de detalhe e formato** esperado. Não copie o conteúdo, copie a estrutura.
-
 ### 1) Identificação de Necessidades dos Usuários e Requisitos de UX
 
 **Que dados coletar?**
-- Como os alunos hoje organizam sessões de estudo em grupo (ferramentas usadas, frequência).
-- Principais dificuldades para combinar horários e manter o grupo engajado.
-- Expectativas sobre lembretes, divisão de tópicos de estudo e acompanhamento de progresso.
+- Como hoje é feito pela empresa o controle dos veúculos locados.
+- Pontos de melhoria e aperfeiçoamento no processo de gestão dos veículos.
+- Estudos das etapas de uma ordem de controle logístico e seus principais atores envolvidos.
 
 **De quem coletar?**
-- Alunos de graduação de Ciência da Computação, do 2º ao 6º semestre, que já participaram de pelo menos um grupo de estudo nos últimos 6 meses.
-- Amostra mínima: 8 alunos para entrevistas, 40 respostas para o questionário.
-- Recrutamento: convite em grupos de turma no WhatsApp/Discord.
+- Colaboradores de empresas do ramo de construção civil, saneamento básico, locação e comodato e qualquer empresa que opera com obras e processos em que são necessários veículos terceiros.
+- Amostra mínima: 5 pessoas para entrevistas, 5 respostas para o questionário.
+- Recrutamento: network feito com trabalhadores/empresários do ramo.
 
 ### 2) Aspectos Éticos
 

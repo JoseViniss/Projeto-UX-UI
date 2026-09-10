@@ -20,31 +20,29 @@
 
 ---
 
-## Exemplo de entrega
-
-> Continuação do exemplo fictício do app "Estuda+" (grupos de estudo universitários), consolidando os dados coletados na etapa de pesquisa. Copie a estrutura, não o conteúdo.
+## Entrega
 
 ### 1) Perfil Demográfico
 
-- Idade: 18 a 24 anos.
-- Escolaridade: cursando graduação (2º ao 6º semestre).
-- Ocupação: a maioria concilia estudo com estágio ou trabalho meio período (6 de 8 entrevistados).
-- Localização: região metropolitana, moradia com a família ou república estudantil.
+- Idade: 20 a 30 anos.
+- Escolaridade: Variado. Com incidência maior de pessoas com o ensino médio completo, mas também constando alguns com cursos superiores.
+- Funções na empresa: Locatários PJ, gerentes de frota, engenheiros de obra e encarregados de obra.
+- Seguimento: Locação e comodato e saneamento básico.
+- Veículos trabalhados: A maior parte com até 30 veículos locados para controle.
 
 ### 2) Perfil Comportamental e Tecnológico
 
-- Alta familiaridade com tecnologia: todos usam smartphone diariamente e ao menos um app de mensagens em grupo (WhatsApp ou Discord).
-- Uso de produtos similares: 7 de 8 entrevistados já tentaram organizar grupo de estudo por WhatsApp; nenhum usou um app dedicado a isso.
-- Contexto de uso predominante: à noite, entre aulas, e na semana anterior às provas.
+- Alta familiaridade com tecnologia: todos usam smartphone diariamente e a maioria utiliza computadores e softwares paralelos para a rotina de tralho.
+- Uso de produtos similares: Todos citaram a utilização de Excel e planilhas para controle de seus veículos. 2 informaram a utilização de sistemas concorrentes.
+- Contexto de uso predominante: Em horário comercial trabalho que, no contexto das obras de saneamento, oscilam entre 7:00h da manhã e 22:00h da noite sete dias por semana.
 
 ### 3) Necessidades e Dores Consolidadas
 
 | Necessidade/Dor | Frequência aproximada | Evidência |
 | :---- | :---- | :---- |
-| Dificuldade em combinar horário comum entre os membros | 7 de 8 entrevistados | "A gente ficava mandando mensagem por dias até fechar um horário" (E4) |
-| Grupo perde engajamento após 1-2 semanas | 6 de 8 entrevistados | Confirmado também nas respostas do questionário (68% relataram abandono do grupo) |
-| Falta de divisão clara de quem estuda qual tópico | 5 de 8 entrevistados | "Todo mundo estudava a mesma coisa e a gente repetia esforço" (E2) |
-| Preocupação com exposição de dados pessoais em grupos abertos | 3 de 8 entrevistados | Mencionado espontaneamente nas entrevistas |
+| Lentidão e manualização de controles das manutenções | 5 de 5 entrevistados/questionário | "Só com manutenção, por exemplo, a empresa tem um gasto de quase R$ 30.0000,00 mês" (E2, Gerente de frota) |
+| Acompanhamento de gastos com multas, combustíveis e etc. | 5 de 5 entrevistados/questionário | "São 14 caminhões, as vezes chega algumas multas que eu não sei se é minha responsabilidade ou se é do cliente" (E1 Locador PJ) |
+| Disponibilidade de carros disponíveis | 3 de 5 entrevistados | "As vezes a gente precisa de um carro e é uma demora pra saber qual que tem que pegar ou qual que pode pegar" (E3, Encarregado geral) |
 
 ### 4) Segmentação
 

@@ -32,7 +32,7 @@
 
 ### 2) Perfil Comportamental e Tecnológico
 
-- Alta familiaridade com tecnologia: todos usam smartphone diariamente e a maioria utiliza computadores e softwares paralelos para a rotina de tralho.
+- Alta familiaridade com tecnologia: todos usam smartphone diariamente e a maioria utiliza computadores e softwares paralelos para a rotina de trabalho.
 - Uso de produtos similares: Todos citaram a utilização de Excel e planilhas para controle de seus veículos. 2 informaram a utilização de sistemas concorrentes.
 - Contexto de uso predominante: Em horário comercial trabalho que, no contexto das obras de saneamento, oscilam entre 7:00h da manhã e 22:00h da noite sete dias por semana.
 

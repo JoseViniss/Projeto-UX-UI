@@ -48,7 +48,7 @@
 
 Foram identificados dois perfis distintos entre os participantes:
 
-- **Organizador(a)** — toma a iniciativa de criar o grupo e cobrar andamento (2 de 8 entrevistados). Alta motivação, frustra-se com falta de resposta dos demais.
-- **Participante** — entra no grupo já formado, engaja-se enquanto há cobrança externa (6 de 8 entrevistados). Motivação mais dependente do grupo.
+- **Analítico(a)** — Se preocupa muito com os dados quantitativos e acompanhamento extremamente detalhado dos processo controlados (2 de 5 entrevistados + formulário).
+- **Pragmático** — Já tem um foco maior na operação básica. Tem interesse em ter os principais indicativos de maneira fácil, mas não se preocupa nas minúcias do processo (3 de 5 entrevistados + formulário). 
 
-Segmento priorizado como persona primária: **Participante**, por representar a maioria do público-alvo e concentrar as dores mais citadas (abandono do grupo, falta de divisão de tópicos).
+Segmento priorizado como persona primária: **Analítico(a)**. Apesar de ser a menor amostra, é quem mais demostra interesse/precisa do sistema.

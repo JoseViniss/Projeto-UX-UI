@@ -27,32 +27,51 @@
 
 ---
 
-## Exemplo de entrega
-
-> Continuação do exemplo fictício do app "Estuda+", usando a persona [Marina Souza](4_personas.md). Copie a estrutura, não o conteúdo.
+## Entrega
 
 ### 1) Cenário de Análise/Problema
 
-Marina está no 4º semestre e, como sempre faz antes de provas, entra em um grupo de WhatsApp criado por uma colega para estudar Estruturas de Dados junto com mais quatro pessoas da turma. Na primeira semana, todo mundo manda mensagens animadas combinando encontros e trocando resumos. Mas ninguém definiu quem ficaria responsável por qual tópico, e aos poucos as mensagens ficam mais espaçadas. Duas semanas antes da prova, o grupo está praticamente silencioso — só restam mensagens antigas sem resposta. Marina não sabe se deve cobrar os colegas, criar outro grupo do zero ou simplesmente desistir e estudar sozinha, como acabou fazendo nas últimas duas vezes.
+Ricardo possui uma empresa de locação de caminhões com 25 veículos e administra praticamente toda a operação sozinho. Além disso, trabalha em regime CLT em outra empresa durante o dia. Atualmente, mantém o controle da frota, das obras, das manutenções, dos contratos e das contas por meio de diversas planilhas e anotações.
+
+Durante o horário de trabalho CLT, surgem mensagens de motoristas, responsáveis pelas obras e fornecedores. Ricardo precisa consultar informações como onde determinado caminhão está, quando será necessário realizar uma manutenção ou se determinado cliente já realizou um pagamento. Porém, muitas dessas informações estão nas planilhas que ficam no computador, dificultando o acesso pelo celular.
+
+Ele acaba tentando resolver algumas situações de memória ou pedindo informações por WhatsApp, enquanto outras demandas ficam para quando chega em casa. Com isso, sente que está sempre "correndo atrás" das informações e teme esquecer algum pagamento, manutenção, cobrança ou compromisso relacionado aos caminhões.
 
 ### 2) Questões de Refinamento
 
-- Isso acontece com todos os grupos de estudo da Marina ou só com alguns?
-- Por que ninguém assume a organização do grupo depois da primeira semana?
-- O problema é falta de ferramenta (lembrete, divisão de tarefas) ou falta de compromisso dos colegas?
-- Existe um momento específico em que o grupo começa a esvaziar?
-- Marina já tentou algo para reverter a situação? O que aconteceu?
+- Quais informações Ricardo precisa consultar com maior frequência enquanto está trabalhando na empresa CLT?
+- O maior problema é a falta de acesso às planilhas pelo celular ou a própria organização das informações?
+- Quantas vezes durante o dia Ricardo recebe demandas relacionadas aos caminhões e às obras?
+- Quais tipos de problemas podem ser resolvidos rapidamente pelo celular e quais exigem que ele acesse o computador?
+- Como Ricardo atualmente controla as manutenções e os vencimentos dos veículos?
+- Ele consegue saber rapidamente quais caminhões estão disponíveis, locados, em manutenção ou parados?
+- Como ele acompanha os valores que tem para receber das obras e os pagamentos que precisa realizar?
+- O que acontece quando Ricardo não consegue responder imediatamente a uma solicitação de motorista, cliente ou fornecedor?
+- Ele já tentou utilizar algum aplicativo ou outra ferramenta para substituir as planilhas? Por que não continuou utilizando?
 
 ### 3) Refinamento do Cenário de Análise/Problema
 
-Nas três últimas vezes em que Marina participou de grupos de estudo, o padrão se repetiu: o grupo é criado de forma informal, sem que ninguém assuma explicitamente a organização, e sem dividir quem estuda qual tópico. Passada a primeira semana — justamente quando o volume de conteúdo aumenta e a rotina de estágio de Marina fica mais apertada —, as respostas somem. Ela já tentou mandar mensagem cobrando o grupo duas vezes, mas se sentiu "chata" fazendo isso e parou. O problema não é falta de vontade de estudar em grupo: é a ausência de qualquer estrutura (divisão de tópicos, lembretes, um responsável) que sustente o grupo depois do entusiasmo inicial.
+Ricardo concentra praticamente toda a gestão da empresa de locação em si mesmo. O problema não está apenas na quantidade de informações, mas na falta de acesso e centralização dessas informações durante o período em que ele está trabalhando na empresa CLT.
+
+As informações sobre os 25 caminhões estão distribuídas entre planilhas, documentos, mensagens e anotações. Para descobrir a situação de um veículo, por exemplo, Ricardo pode precisar consultar uma planilha para verificar a obra em que está alocado, outra para verificar informações financeiras e registros separados para conferir manutenções.
+
+Ele consegue administrar a empresa dessa maneira, mas isso exige que esteja diante do computador ou que mantenha muitas informações na memória. Quando recebe uma solicitação durante o trabalho CLT, frequentemente precisa interromper o que está fazendo, procurar a informação no celular ou deixar a resposta para depois.
+
+O problema central, portanto, não é simplesmente "ter muitas planilhas", mas a dificuldade de transformar as informações da empresa em uma visão rápida, organizada e acessível de qualquer lugar. Ricardo precisa conseguir saber, pelo celular, o que está acontecendo com sua frota sem depender de estar em casa ou diante de um computador.
 
 ### 4) Contexto de Uso
 
-- Marina usa o celular entre aulas e à noite, geralmente em casa ou na biblioteca da faculdade, com Wi-Fi ou 4G.
-- Contexto social: grupo de 4-6 colegas de turma, sem hierarquia definida — ninguém "responsável" formalmente pelo grupo.
-- O problema se intensifica na semana anterior às provas, quando o volume de conteúdo e a ansiedade aumentam.
-- Marina normalmente está com atenção dividida (entre uma aula e outra, ou cansada depois do estágio) quando tenta engajar o grupo.
+Ricardo utiliza o sistema principalmente pelo celular durante o expediente CLT, nos intervalos ou quando recebe alguma demanda relacionada à empresa de locação. Também utiliza o sistema à noite, em casa, quando realiza atividades de gestão que exigem mais atenção.
+
+Contexto profissional: Ricardo possui duas rotinas de trabalho. Durante parte do dia está empregado em regime CLT em outra empresa e, paralelamente, administra sua própria empresa de locação de caminhões.
+
+Contexto operacional: Os 25 caminhões podem estar distribuídos entre diferentes obras, em manutenção, disponíveis ou em processo de locação. Motoristas, clientes, responsáveis pelas obras e fornecedores podem gerar novas demandas ao longo do dia.
+
+Contexto financeiro: Ricardo precisa acompanhar contas a pagar, valores a receber, pagamentos de clientes, despesas relacionadas aos veículos e outros compromissos financeiros da empresa.
+
+Contexto de manutenção: Problemas mecânicos e revisões podem surgir enquanto os caminhões estão trabalhando nas obras. Ricardo precisa registrar e acompanhar essas ocorrências para evitar que uma manutenção seja esquecida ou que um veículo fique indisponível por mais tempo que o necessário.
+
+Contexto de uso do sistema: O aplicativo precisa funcionar como uma espécie de "central de controle da empresa no bolso", permitindo que Ricardo consulte rapidamente a situação dos caminhões, obras, manutenções e financeiro sem precisar abrir diversas planilhas ou estar diante do computador.
 
 ### 5) Jornada do Usuário (atual, sem solução) — Marina
 

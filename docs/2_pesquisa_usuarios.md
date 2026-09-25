@@ -33,7 +33,7 @@ Para cada instrumento, apresente:
 
 **De quem coletar?**
 - Colaboradores de empresas do ramo de construção civil, saneamento básico, locação e comodato e qualquer empresa que opera com obras e processos em que são necessários veículos terceiros.
-- Amostra mínima: 5 pessoas para entrevistas, 5 respostas para o questionário.
+- Amostra mínima: 2 pessoas para entrevistas, 5 respostas para o questionário.
 - Recrutamento: network feito com trabalhadores/empresários do ramo.
 
 ### 2) Aspectos Éticos

@@ -22,7 +22,7 @@ Para cada instrumento, apresente:
 
 ---
 
-## Exemplo de entrega
+## Entrega
 
 ### 1) Identificação de Necessidades dos Usuários e Requisitos de UX
 
@@ -38,15 +38,11 @@ Para cada instrumento, apresente:
 
 ### 2) Aspectos Éticos
 
-Sim, o projeto envolve dados pessoais de participantes (nome, e-mail, respostas sobre hábitos de estudo), portanto:
-- Será aplicado um **Termo de Consentimento Livre e Esclarecido (TCLE)** antes de qualquer coleta, explicando objetivo da pesquisa, uso dos dados e direito de desistência a qualquer momento.
 - Os dados serão coletados de forma **anonimizada** (sem nome/e-mail nas respostas do questionário) e armazenados apenas na equipe, em conformidade com a LGPD (Lei n.º 13.709/2018).
-- Gravações de entrevista serão apagadas ao final do projeto, mantendo-se apenas as transcrições anonimizadas usadas na análise.
 
 ### 3) Ferramentas de Coleta de Dados
 
 | Instrumento | Objetivo | Como aplicar | Link/Roteiro |
 | :---- | :---- | :---- | :---- |
 | **Entrevista semiestruturada** | Entender em profundidade como os alunos organizam e mantêm grupos de estudo, e onde o processo falha. | Sessão individual de 20-30 min, presencial ou por chamada de vídeo. Seguir o roteiro fixo, mas permitir perguntas de aprofundamento ("por quê?", "pode dar um exemplo?"). Gravar com autorização e transcrever depois. | Roteiro: 1) Como você organiza sessões de estudo hoje? 2) Conte sobre a última vez que um grupo de estudo não funcionou. 3) O que faria você usar um app específico para isso? |
-| **Questionário (Google Forms)** | Quantificar ferramentas usadas, frequência de grupos de estudo e principais frustrações, em uma amostra maior. | Divulgar o link em grupos de turma, aberto por 1 semana. Sem identificação pessoal, tempo estimado de resposta de 5 min. | `https://forms.google.com/exemplo-estuda-mais` *(placeholder — substituir pelo link real)* |
-| **Grupo focal** | Observar a discussão entre alunos sobre o que tornaria um grupo de estudo "bom", captando divergências de opinião difíceis de obter em entrevista individual. | Sessão única com 5-6 alunos, 45 min, mediada por um membro da equipe seguindo um roteiro de tópicos, com outro membro registrando anotações. | Roteiro de tópicos: hábitos atuais, ferramentas testadas e abandonadas, o que faria o grupo "durar" até a prova. |
+| **Questionário (Google Forms)** | O questionário tem como objetivo entender melhor os processos atuais da empresa relacionados à gestão dos veículos locados, identificando necessidades, dificuldades e oportunidades de melhoria. | `https://forms.gle/vB5TAfMsMH3SYNEP8` |

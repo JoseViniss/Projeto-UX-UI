@@ -45,4 +45,4 @@ Para cada instrumento, apresente:
 | Instrumento | Objetivo | Como aplicar | Link/Roteiro |
 | :---- | :---- | :---- | :---- |
 | **Entrevista semiestruturada** | Entender em profundidade como os trabalhadores organizam e mantêm as rotinas de controle dos veículos, e onde o processo falha. | Sessão individual de 10-15 min, presencial ou por chamada de vídeo. Seguir o roteiro fixo, mas permitir perguntas de aprofundamento. |`https://drive.google.com/file/d/1lnqMfOuchuuAvUvd8-7UEmsOTj_Q2S0f/view?usp=sharing`|
-| **Questionário (Google Forms)** | O questionário tem como objetivo entender melhor os processos atuais da empresa relacionados à gestão dos veículos locados, identificando necessidades, dificuldades e oportunidades de melhoria. || `https://forms.gle/vB5TAfMsMH3SYNEP8` |
+| **Questionário (Google Forms)** | O questionário tem como objetivo entender melhor os processos atuais da empresa relacionados à gestão dos veículos locados, identificando necessidades, dificuldades e oportunidades de melhoria. |Encaminhando o formulário para os trabalhadores/empresários do ramo conhecidos.| `https://forms.gle/vB5TAfMsMH3SYNEP8` |

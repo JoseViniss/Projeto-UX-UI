@@ -64,7 +64,7 @@
 | **Nível de tecnologia** | Médio — utiliza smartphone diariamente, principalmente para comunicação e trabalho, mas atualmente depende de planilhas e computador para administrar a empresa. |
 | **Frustração principal** | Não conseguir acompanhar a empresa em tempo real enquanto está trabalhando na empresa onde é CLT, dependendo de planilhas que ficam no computador e demandam atualização e consulta manual. |
 
-### Mapa de Empatia — Joel
+### Mapa de Empatia — Ricardo
 
 | Quadrante | Descrição |
 | :---- | :---- |
@@ -88,7 +88,7 @@
 | **Nível de tecnologia** | Baixo — utiliza smartphone para funções básicas do dia a dia, mas possui dificuldade para aprender e utilizar novos sistemas e aplicativos. |
 | **Frustração principal** | Ter que preencher fichas de revisão e registrar informações do caminhão em um sistema que considera burocrático e difícil de utilizar. |
 
-### Mapa de Empatia — Joel
+### Mapa de Empatia — João Carlos
 
 | Quadrante | Descrição |
 | :---- | :---- |

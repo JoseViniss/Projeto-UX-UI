@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#102c42">
+<title>AVL Control · Frota, operação e resultados</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+<section id="login-screen" class="login-screen" aria-label="Acesso ao AVL Control">
+<div class="login-story"><span class="eyebrow">AVL CONTROL / GESTÃO DE FROTAS</span><h1>Sua frota em movimento.<br><em>Seus resultados à vista.</em></h1><p>Do pátio à obra, acompanhe cada veículo, cada custo e cada nova oportunidade.</p><div class="login-stats"><span>01 / Frota</span><span>02 / Operação</span><span>03 / Resultados</span></div></div>
+<form id="login-form" class="login-card"><div class="brand"><span class="brand-mark">A<span>↗</span></span><strong>AVL <em>Control</em></strong></div><h2>Bem-vindo de volta</h2><p class="muted">Escolha a perspectiva da sua operação.</p>
+<div class="role-picker"><button type="button" data-action="login-role" data-id="locador" class="selected">Locador<small>Minha frota e recebimentos</small></button><button type="button" data-action="login-role" data-id="locatario">Locatário<small>Minhas obras e operação</small></button></div>
+<label>E-mail<input type="email" name="email" autocomplete="username" value="gestor@avl.demo" required></label><label>Senha<input type="password" name="password" autocomplete="current-password" value="demonstracao" required></label>
+<button class="btn primary" type="submit">Explorar a plataforma <span>→</span></button><p class="demo-note">Ambiente de demonstração. Acesso simulado; dados e fotos salvos somente neste navegador.</p></form>
+</section>
+<div id="app" hidden>
+<aside class="sidebar"><div class="brand"><span class="brand-mark">A<span>↗</span></span><strong>AVL <em>Control</em></strong></div><p class="nav-caption">ESPAÇO DE TRABALHO</p><nav id="desktop-nav" aria-label="Navegação principal"></nav><div class="sidebar-foot"><span class="online-dot"></span> Protótipo interativo <small>Operação & inteligência · v3</small></div></aside>
+<div class="workspace"><header class="topbar"><div><span class="eyebrow">GESTÃO DE FROTAS</span><strong id="context-label">Visão do locador</strong></div><div class="top-actions"><label class="profile-label"><span class="sr-only">Perfil de demonstração</span><select id="profile"><option value="locador">Locador</option><option value="locatario">Locatário</option></select></label><button class="icon-btn" data-action="notifications" aria-label="Abrir alertas">♧<span id="alert-count"></span></button><button class="icon-btn" data-action="logout" aria-label="Sair">↗</button></div></header>
+<main id="main-content" tabindex="-1"></main><footer class="page-footer">AVL Control <span>Dados demonstrativos · armazenamento local</span></footer></div>
+<nav id="mobile-nav" class="mobile-nav" aria-label="Navegação móvel"></nav>
+</div>
+<dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-head"><div><span class="eyebrow">AVL CONTROL</span><h2 id="dialog-title"></h2></div><button class="icon-btn" data-action="close-dialog" aria-label="Fechar janela">×</button></div><div id="dialog-body"></div></dialog>
+<div id="toasts" class="toasts" role="status" aria-live="polite"></div><noscript>Ative o JavaScript para utilizar o AVL Control.</noscript>
+</body></html>

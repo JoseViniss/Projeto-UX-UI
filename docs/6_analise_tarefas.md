@@ -7,30 +7,18 @@ Funcionalidades cobertas:
 2. Registro de Abastecimento e Canhoto Digital
 
 [0. Gerenciar Operação de Veículo Locado em Obra]
-    Plano de execução: 1 > 2
-    |
-    +--- [1. Cadastrar e Alocar Veículo em Obra] (Plano: 1 > 2 > 3)
-    |     |
-    |     +--- [1.1 Acessar Módulo]: Tocar no ícone "Veículos" e acionar "+ Novo Veículo".
-    |     +--- [1.2 Preencher Dados] (Plano: 1 + 2 + 3 + 4 - ordem livre):
-    |     |     +--- [1.2.1]: Digitar placa, modelo e ano do veículo.
-    |     |     +--- [1.2.2]: Informar leitura de hodômetro (km) ou horímetro (horas).
-    |     |     +--- [1.2.3]: Selecionar a obra ativa de destino.
-    |     |     +--- [1.2.4]: Selecionar o motorista responsável pela obra.
-    |     |
-    |     +--- [1.3 Salvar]: Tocar em "Salvar Veículo" e verificar o feedback visual.
-    |
-    +--- [2. Registrar Abastecimento e Canhoto] (Plano: 1 > 2 > 3)
-          |
-          +--- [2.1 Abrir Módulo]: Tocar na aba "Financeiro" e acionar "+ Novo Lançamento".
-          +--- [2.2 Lançar Consumo] (Plano: 1 + 2 + 3 - preenchimento simultâneo):
-          |     +--- [2.2.1]: Selecionar o veículo e a obra correspondente.
-          |     +--- [2.2.2]: Digitar quantidade de litros e valor total em R$.
-          |     +--- [2.2.3]: Atualizar a leitura atual do odômetro/horímetro.
-          |
-          +--- [2.3 Anexar Comprovante] (Plano: 1 / 2 - escolha alternativa excludente):
-                +--- [2.3.1]: Tocar em "Tirar Foto do Canhoto" via câmera, OU
-                +--- [2.3.2]: Tocar em "Escolher da Galeria" e selecionar o arquivo.
+                                        Plano: 1 > 2
+                                       /            \
+                                      /              \
+      [1. Cadastrar e Alocar Veículo em Obra]      [2. Registrar Abastecimento e Canhoto]
+                 Plano: 1 > 2 > 3                             Plano: 1 > 2 > 3
+                /        |        \                          /        |        \
+               /         |         \                        /         |         \
+[1.1 Acessar Módulo] [1.2 Preencher Dados] [1.3 Salvar]  [2.1 Abrir Financeiro] [2.2 Lançar Consumo] [2.3 Anexar Canhoto]
+                         Plano: 1+2+3+4                                              Plano: 1+2+3           Plano: 1 / 2
+                        /   |      |   \                                            /      |      \        /            \
+                       /    |      |    \                                          /       |       \      /              \
+         [1.2.1 Placa/Mod] [1.2.2 Horím.] [1.2.3 Obra] [1.2.4 Motorista]   [2.2.1 Veículo] [2.2.2 Litros/R$] [2.2.3 Odôm.]  [2.3.1 Capturar Câmera] [2.3.2 Upload Galeria]
 
 ## GOMS — Análise de BI e Regularização Documental
 

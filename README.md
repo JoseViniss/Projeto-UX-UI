@@ -10,7 +10,7 @@ Este projeto é desenvolvido pelos seguintes alunos:
 
 ### 1. Breve Descrição
 
-O **AVL Control** é uma plataforma digital de alta fidelidade voltada para a gestão inteligente de frotas de veículos locados. Focada no segmento de construção civil e grandes obras, a aplicação centraliza o controle operacional, financeiro, logístico e documental de máquinas pesadas, caminhões e veículos utilitários em um ambiente integrado, responsivo e de fácil navegação (mobile-first).
+O **AVL Control** é uma plataforma digital voltada para a gestão inteligente de frotas de veículos locados. Focada no segmento de construção civil e grandes obras, a aplicação centraliza o controle operacional, financeiro, logístico e documental de máquinas pesadas, caminhões e veículos utilitários em um ambiente integrado, responsivo e de fácil navegação.
 
 ### 2. Objetivo
 

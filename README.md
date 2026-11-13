@@ -6,51 +6,64 @@ Este projeto é desenvolvido pelos seguintes alunos:
 
 - José Vinicius Garcia Rodrigues
 
-# Documentação do Projeto: AVL Control
+**1. Breve descrição**
 
-### 1. Breve Descrição
+O AVL Control é uma aplicação web voltada ao gerenciamento de veículos locados utilizados na construção civil e em obras de infraestrutura. O sistema reúne informações da frota, movimentações financeiras, alocações em obras, manutenções e documentos, oferecendo duas perspectivas de utilização: a do locador, proprietário dos veículos, e a do locatário, empresa responsável pela operação nas obras.
 
-O **AVL Control** é uma plataforma digital voltada para a gestão inteligente de frotas de veículos locados. Focada no segmento de construção civil e grandes obras, a aplicação centraliza o controle operacional, financeiro, logístico e documental de máquinas pesadas, caminhões e veículos utilitários em um ambiente integrado, responsivo e de fácil navegação.
+**2. Objetivo**
 
-### 2. Objetivo
+O projeto tem como objetivo centralizar o controle financeiro e operacional da frota, facilitando o acompanhamento dos veículos durante sua utilização. Para o locador, o foco está no faturamento, nos recebimentos e nos custos por veículo. Para o locatário, a prioridade é organizar a disponibilidade, a distribuição dos veículos entre obras e a conferência de suas condições de uso.
 
-Automatizar e simplificar a administração de frotas locadas para o setor de construção civil, reduzindo custos operacionais, otimizando o tempo de maquinário em campo, garantindo conformidade documental (IPVA, seguros, CNHs e canhotos) e oferecendo visibilidade em tempo real por meio de indicadores de BI (Business Intelligence) para empresas locadoras e locatários.
+**3. Usuário final**
 
-### 3. Usuário Final
+O AVL Control destina-se a proprietários de caminhões e equipamentos, empresas locadoras, construtoras e organizações que executam obras de infraestrutura. Seus principais usuários são gestores de frota, profissionais administrativos e financeiros, responsáveis por manutenção e encarregados de obras.
 
-* **Empresa Locadora:** Gestores de frota, administradores financeiros e equipes de logística que precisam monitorar o status dos veículos, faturamento, manutenções preventivas/corretivas e a regularidade de toda a documentação.
-* **Locatários / Gestores de Obra:** Encarregados de canteiro, engenheiros civis e supervisores de obra que necessitam registrar abastecimentos, controlar o uso por horímetro/hodômetro, alocar motoristas e gerenciar a entrega e o recebimento de canhotos.
+**4. Principais benefícios para os usuários**
 
-### 4. Principais Benefícios para os Usuários
+- **Centralização das informações:** reúne dados financeiros e operacionais em um único ambiente.
+- **Maior controle financeiro:** facilita a identificação de despesas, faturamentos, recebimentos e parcelas vencidas.
+- **Organização da operação:** permite acompanhar a disponibilidade dos veículos e seus vínculos com obras e motoristas.
+- **Apoio à manutenção preventiva:** apresenta alertas de troca de óleo com base nas leituras e nos intervalos cadastrados.
+- **Registro das condições dos veículos:** utiliza checklists de retorno para documentar avarias e encaminhar necessidades de manutenção.
+- **Apoio à tomada de decisão:** apresenta indicadores, gráficos e relatórios para comparar custos e resultados.
+- **Facilidade de acesso:** oferece interface adaptada a celulares e computadores, com recursos de navegação por teclado.
 
-* **Visibilidade Total:** Monitoramento em tempo real da distribuição da frota entre diferentes frentes de obra.
-* **Redução de Despesas:** Controle rigoroso de abastecimentos e manutenções para evitar ociosidade e gastos excessivos com corretivas imprevistas.
-* **Conformidade Documental:** Alertas visuais automatizados para evitar vencimentos de documentos veiculares e CNHs de motoristas.
-* **Agilidade Operacional:** Interface otimizada para dispositivos móveis, permitindo lançamentos rápidos direto do canteiro de obras.
-* **Tomada de Decisão Baseada em Dados:** Gráficos e relatórios gerenciais consolidados para análise de custos por obra e consumo de combustível.
+**5. Funcionalidades**
 
-### 5. Funcionalidades
+O sistema contempla:
 
-* **Tela de Login Dual Role:** Autenticação simulada com controle de acesso diferenciado para Empresa e Locatário.
-* **Dashboard Executiva & BI:** KPIs interativos, gráfico de rosca de status da frota e atalhos de navegação rápida.
-* **Gestão de Veículos (CRUD):** Cadastro completo, alteração de status (*Disponível*, *Em Obra*, *Manutenção*), hodômetro/horímetro atual e alocação por obra.
-* **Gestão de Obras e Motoristas:** Cadastro de novas obras, alocação de motoristas vinculados com registro de CNH e histórico de atribuições.
-* **Controle Financeiro e de Combustível:** Lançamento de abastecimentos e despesas operacionais (peças, pedágios, seguros) com filtros por categoria e obra.
-* **Controle de Manutenções:** Acompanhamento de manutenções preventivas e corretivas com alertas por quilometragem ou período.
-* **Canhotos e Documentação:** Módulo de controle de comprovantes de entrega e regularidade de documentos com badges de status (OK, a vencer, vencido).
-* **Gerador de Relatórios e Exportação:** Visualização de dados tabulares e simulação de exportação para PDF e Excel com gráficos dinâmicos (Chart.js).
+- Painéis específicos para locador e locatário.
+- Cadastro de veículos com fotos, identificação, categoria, ano, leitura de quilometragem ou horímetro e parâmetros de manutenção.
+- Consulta individual de resultados financeiros, percursos registrados e histórico de manutenção.
+- Cadastro de obras e motoristas.
+- Alocação de veículos em obras, com registro do motorista responsável e das condições de saída.
+- Finalização de rotinas e checklist de retorno, incluindo combustível, percurso, pneus, freios, iluminação, carroceria e fluidos.
+- Encaminhamento de veículos com avarias para manutenção.
+- Registro e conclusão de serviços de oficina, com atualização da referência de troca de óleo.
+- Cadastro de categorias financeiras e lançamento de despesas.
+- Cadastro de clientes, geração de faturamentos parcelados e registro de recebimentos parciais ou totais.
+- Armazenamento local de canhotos e comprovantes.
+- Relatórios com filtros, exportação em CSV e impressão ou geração de PDF pelo navegador.
 
-### 6. Tecnologias e Ferramentas Computacionais Utilizadas
+**6. Tecnologias e ferramentas computacionais utilizadas**
 
-* **Front-end:** HTML5, CSS3 e JavaScript Vanilla (Single Page Application - SPA).
-* **Estilização e Layout:** Tailwind CSS (utilizado via CDN com customização de paleta de cores em tons de azul e verde para design system).
-* **Visualização de Dados e Gráficos:** Chart.js para renderização de gráficos de barras, linhas e rosca.
-* **Ícones e Componentes visuais:** FontAwesome e interface baseada em conceitos modernos de UX/UI focados em **Mobile-First**.
-* **Arquitetura (Preparação Futura):** Desenvolvido em estrutura modular com estado em memória (`state store`), preparado para futura integração com back-end em PHP, Python ou Spring Boot e persistência com React.
+A versão atual foi desenvolvida com **React e JavaScript**, utilizando componentes reutilizáveis para organizar páginas, formulários, tabelas e demais elementos da interface. O gerenciamento do estado utiliza recursos do React, como **Context API e Hooks**.
 
-### 7. Contexto de Uso
+O projeto utiliza **Vite** para o ambiente de desenvolvimento e a compilação da aplicação, além de **Node.js e npm** para execução das ferramentas e gerenciamento das dependências. A estrutura visual utiliza **HTML semântico e CSS responsivo**, enquanto os gráficos e ícones são construídos em **SVG**.
 
-O sistema é utilizado tanto em escritórios centrais (por gestores de frota e analistas financeiros avaliando o desempenho e os custos globais da locação) quanto diretamente nos canteiros de obras (por motoristas e encarregados utilizando smartphones e tablets para registrar abastecimentos, atualizar hodômetros, anexar canhotos de entrega e solicitar manutenções de forma instantânea).
+Os dados do protótipo são armazenados no **localStorage** do navegador. A aplicação também utiliza recursos nativos para leitura de arquivos, processamento de imagens e exportação de relatórios.
+
+A interface inclui navegação por **Tab e Shift+Tab**, ativação de botões por **Enter ou Espaço**, fechamento de janelas por **Escape**, indicação visual de foco e identificação dos campos dos formulários.
+
+Nesta etapa, o sistema funciona como um **protótipo de front-end**, com acesso demonstrativo e armazenamento local. A integração com uma API, autenticação real e banco de dados compartilhado está prevista para uma etapa futura.
+
+**7. Contexto de uso**
+
+O AVL Control foi pensado para situações em que veículos e equipamentos circulam entre diferentes obras, exigindo acompanhamento de disponibilidade, responsáveis, despesas e condições de conservação.
+
+No escritório, o locador pode consultar faturamentos, registrar recebimentos e analisar os gastos de cada veículo. Na operação, a empresa locatária pode organizar a distribuição da frota entre canteiros, indicar motoristas responsáveis e registrar o retorno dos veículos.
+
+A proposta prioriza o uso pelo celular para facilitar os registros durante a rotina de trabalho, mantendo uma interface adequada ao computador para consultas, gestão financeira e análise de relatórios.
 
 ## Desenvolvimento
 

@@ -6,7 +6,7 @@ Este projeto é desenvolvido pelos seguintes alunos:
 
 - José Vinicius Garcia Rodrigues
 
-**1. Breve descrição**
+# **Documentação do Projeto: AVL Control**
 
 O AVL Control é uma aplicação web voltada ao gerenciamento de veículos locados utilizados na construção civil e em obras de infraestrutura. O sistema reúne informações da frota, movimentações financeiras, alocações em obras, manutenções e documentos, oferecendo duas perspectivas de utilização: a do locador, proprietário dos veículos, e a do locatário, empresa responsável pela operação nas obras.
 

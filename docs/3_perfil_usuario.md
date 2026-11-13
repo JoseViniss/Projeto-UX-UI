@@ -1,25 +1,3 @@
-# Perfil do Usuário
-
-> **_NOTE:_**: Esta entrega consolida e sintetiza os dados coletados na etapa de Pesquisa e Coleta de Dados com Usuários, caracterizando o público-alvo real antes de criar as personas (arquétipos fictícios). Aqui ainda não há personagem — são dados e padrões observados nos participantes reais.
-
-1) **Perfil Demográfico**
-- Faixa etária, gênero, escolaridade, ocupação, localização geográfica e outros dados demográficos relevantes ao produto/serviço.
-
-2) **Perfil Comportamental e Tecnológico**
-- Nível de familiaridade com tecnologia (baixo/médio/alto) e dispositivos mais usados.
-- Frequência e contexto de uso de produtos/serviços similares.
-- Hábitos relevantes para o produto ou serviço em questão.
-
-3) **Necessidades e Dores Consolidadas**
-- Sintetize (não repita bruto) os principais achados da pesquisa: padrões que se repetiram entre os participantes, necessidades não atendidas e frustrações recorrentes.
-- Aponte, para cada necessidade/dor, quantos participantes (aproximadamente) a mencionaram — isso embasa a priorização nas próximas etapas.
-
-4) **Segmentação (se aplicável)**
-- Caso os dados revelem mais de um grupo de usuários com necessidades distintas, descreva cada segmento e o que os diferencia.
-- Indique qual(is) segmento(s) será(ão) priorizado(s) como personas primárias.
-
----
-
 ## Entrega
 
 ### 1) Perfil Demográfico

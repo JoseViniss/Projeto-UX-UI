@@ -1,77 +1,83 @@
-# Análise de Tarefas
+# DOCUMENTAÇÃO DE ENGENHARIA DE USABILIDADE E ANÁLISE DE TAREFAS - AVL CONTROL
 
-> **_NOTE:_**: Enquanto o Cenário de Análise/Problema descreve a situação em prosa, a Análise de Tarefas modela formalmente como o usuário executa as funcionalidades mais importantes da interface/produto. Isso alimenta diretamente a Arquitetura de Informação e o Fluxo do Usuário na próxima etapa.
+# 1. HTA (Hierarchical Task Analysis) — Operação de Frota em Obra
 
-A equipe deve modelar pelo menos **1 HTA e 1 GOMS**, cobrindo ao menos **4 funcionalidades diferentes** entre os dois modelos. Cada diagrama/tabela deve vir acompanhado de um texto explicando a funcionalidade modelada.
+Funcionalidades cobertas: 
+1. Cadastro e Alocação de Veículo em Obra
+2. Registro de Abastecimento e Canhoto Digital
 
-1) **HTA (Hierarchical Task Analysis)**
-- Decomponha a tarefa em objetivo principal → subtarefas → operações, em uma estrutura hierárquica (árvore).
-- Todo nó que tiver mais de um filho deve trazer, dentro da própria caixa, o **plano de execução** referenciando os filhos pelo número local (1, 2, 3...): `>` sequência (ex.: `1>2` = faça 1, depois 2), `+` simultâneo/sem ordem definida (ex.: `1+2` = faça 1 e 2, em qualquer ordem), `/` alternativa (ex.: `1/2` = faça 1 ou 2, não ambos). Quando o plano não se encaixar nesses três casos (ex.: repetição), descreva-o em prosa dentro da caixa.
+[0. Gerenciar Operação de Veículo Locado em Obra]
+    Plano de execução: 1 > 2
+    |
+    +--- [1. Cadastrar e Alocar Veículo em Obra] (Plano: 1 > 2 > 3)
+    |     |
+    |     +--- [1.1 Acessar Módulo]: Tocar no ícone "Veículos" e acionar "+ Novo Veículo".
+    |     +--- [1.2 Preencher Dados] (Plano: 1 + 2 + 3 + 4 - ordem livre):
+    |     |     +--- [1.2.1]: Digitar placa, modelo e ano do veículo.
+    |     |     +--- [1.2.2]: Informar leitura de hodômetro (km) ou horímetro (horas).
+    |     |     +--- [1.2.3]: Selecionar a obra ativa de destino.
+    |     |     +--- [1.2.4]: Selecionar o motorista responsável pela obra.
+    |     |
+    |     +--- [1.3 Salvar]: Tocar em "Salvar Veículo" e verificar o feedback visual.
+    |
+    +--- [2. Registrar Abastecimento e Canhoto] (Plano: 1 > 2 > 3)
+          |
+          +--- [2.1 Abrir Módulo]: Tocar na aba "Financeiro" e acionar "+ Novo Lançamento".
+          +--- [2.2 Lançar Consumo] (Plano: 1 + 2 + 3 - preenchimento simultâneo):
+          |     +--- [2.2.1]: Selecionar o veículo e a obra correspondente.
+          |     +--- [2.2.2]: Digitar quantidade de litros e valor total em R$.
+          |     +--- [2.2.3]: Atualizar a leitura atual do odômetro/horímetro.
+          |
+          +--- [2.3 Anexar Comprovante] (Plano: 1 / 2 - escolha alternativa excludente):
+                +--- [2.3.1]: Tocar em "Tirar Foto do Canhoto" via câmera, OU
+                +--- [2.3.2]: Tocar em "Escolher da Galeria" e selecionar o arquivo.
 
-2) **GOMS (Goals, Operators, Methods, Selection Rules)**
+# GOMS — Análise de BI e Regularização Documental
 
-Escreva como um esboço textual hierárquico (não em tabela), no formato:
+Funcionalidades cobertas: 
+3. Geração e Exportação de Relatórios BI
+4. Auditoria e Regularização de Documentação/Manutenção
 
-- `GOAL n`: o objetivo (pode ser decomposto em subgoals `GOAL n.1`, `GOAL n.2`...).
-- `METHOD n.X`: um dos métodos possíveis para atingir o goal acima, identificado por uma letra (`A`, `B`, `C`...).
-- `(SEL. RULE: ...)`: logo abaixo de cada METHOD, entre parênteses — a condição que leva o usuário a escolher esse método em vez de outro. Só existe quando há mais de um método para o mesmo goal.
-- `OP. n.X.k`: os operadores (ações atômicas — clique, digitação, gesto, verificação visual) que compõem o método, numerados em sequência.
+- GOAL 0: Auditar Desempenho Financeiro e Regularidade da Frota no AVL Control
 
----
+  - GOAL 1: Gerar e Exportar Relatório Gerencial de BI
+    - GOAL 1.1: Acessar e Filtrar Painel de BI
+      - METHOD 1.1.A: Acesso Direto pela Barra Inferior
+        - (SEL. RULE: Usar quando o usuário já está navegando internamente e deseja abrir o BI).
+        - OP. 1.1.A.1: Deslocar o polegar até a barra de navegação inferior.
+        - OP. 1.1.A.2: Tocar no ícone da aba "BI / Relatórios".
+        - OP. 1.1.A.3: Verificar o carregamento dos gráficos de barras e linhas.
+      - METHOD 1.1.B: Acesso por Atalho de KPI na Dashboard
+        - (SEL. RULE: Usar quando o usuário está na tela inicial e observa o card de resumo).
+        - OP. 1.1.B.1: Localizar o card interativo "Custo Mensal / Relatórios" na Dashboard.
+        - OP. 1.1.B.2: Tocar sobre o card para direcionamento automático ao módulo.
 
-## Exemplo de entrega
+    - GOAL 1.2: Configurar Parâmetros e Exportar Arquivo
+      - OP. 1.2.1: Tocar no seletor "Filtrar por Obra" e escolher o canteiro desejado.
+      - OP. 1.2.2: Conferir a pré-visualização da tabela consolidada.
+      - GOAL 1.2.3: Escolher Formato de Exportação
+        - METHOD 1.2.3.A: Exportar em PDF
+          - (SEL. RULE: Relatório para prestação de contas visual ou assinatura).
+          - OP. 1.2.3.A.1: Tocar no botão azul "Exportar PDF".
+          - OP. 1.2.3.A.2: Aguardar a confirmação do sistema.
+        - METHOD 1.2.3.B: Exportar em Excel/CSV
+          - (SEL. RULE: Análise contábil ou importação em ERP externo).
+          - OP. 1.2.3.B.1: Tocar no botão verde "Exportar Excel".
+          - OP. 1.2.3.B.2: Aguardar a conclusão do download da planilha.
 
-> Continuação do exemplo fictício do app "Estuda+". Copie a estrutura, não o conteúdo.
-
-### HTA — Criar um grupo de estudo
-
-**Funcionalidade**: permitir que um aluno crie um novo grupo de estudo e convide colegas, definindo os tópicos a dividir.
-
-> O plano fica escrito dentro da própria caixa do nó pai, logo abaixo da descrição da tarefa.
-
-```mermaid
-graph TD
-    A["0. Criar grupo de estudo<br/>1>2>3"] --> B["1. Definir dados do grupo<br/>1+2"]
-    A --> C["2. Convidar colegas<br/>1>2"]
-    A --> D["3. Dividir tópicos<br/>1, depois repetir 2 para cada tópico pendente"]
-    B --> B1["1.1 Inserir nome do grupo"]
-    B --> B2["1.2 Escolher disciplina/prova"]
-    C --> C1["2.1 Gerar link de convite"]
-    C --> C2["2.2 Compartilhar link<br/>1/2"]
-    C2 --> C2a["2.2.1 Compartilhar via WhatsApp"]
-    C2 --> C2b["2.2.2 Copiar link manualmente"]
-    D --> D1["3.1 Listar tópicos da prova"]
-    D --> D2["3.2 Atribuir tópico a cada membro"]
-```
-
-- **Plano 0 (`1>2>3`)**: definir os dados do grupo, depois convidar colegas, depois dividir os tópicos — nessa ordem.
-- **Plano 1 (`1+2`)**: nome do grupo e disciplina/prova são preenchidos no mesmo formulário, em qualquer ordem.
-- **Plano 2 (`1>2`)**: só é possível compartilhar o link depois de gerá-lo.
-- **Plano 2.2 (`1/2`)**: o organizador escolhe **um** dos dois canais — WhatsApp ou copiar o link manualmente — nunca os dois.
-- **Plano 3 (`1>2`)**: lista os tópicos da prova e depois atribui responsável para cada tópico pendente.
-
-### GOMS — Marcar um tópico como estudado
-
-**Funcionalidade**: permitir que o participante registre que concluiu o estudo de um tópico atribuído a ele.
-
-```
-GOAL 0: marcar o tópico "Grafos" como estudado
-
-  GOAL 1: chegar até a tela do tópico "Grafos"
-
-    METHOD 1.A: navegar pela aba "Meu grupo"
-    (SEL. RULE: app está na tela inicial, sem notificação pendente)
-      OP. 1.A.1: tocar na aba "Meu grupo"
-      OP. 1.A.2: localizar o tópico "Grafos" na lista
-      OP. 1.A.3: tocar no tópico "Grafos"
-
-    METHOD 1.B: acessar direto pela notificação
-    (SEL. RULE: existe notificação de lembrete para o tópico "Grafos")
-      OP. 1.B.1: tocar na notificação do lembrete
-      OP. 1.B.2: aguardar a tela do tópico abrir
-
-  GOAL 2: confirmar a conclusão do tópico
-    METHOD 2.A: marcar como concluído
-      OP. 2.A.1: tocar no botão "Concluí"
-      OP. 2.A.2: confirmar na caixa de diálogo
-```
+  - GOAL 2: Verificar e Regularizar Pendências Documentais
+    - GOAL 2.1: Identificar Alertas Críticos
+      - OP. 2.1.1: Observar os badges de status na Dashboard ou aba "Docs".
+      - OP. 2.1.2: Inspecionar visualmente os itens em vermelho ("Vencido") ou amarelo ("A Vencer").
+    - GOAL 2.2: Atualizar Situação do Documento Pendente
+      - METHOD 2.2.A: Renovar Documento Veicular (IPVA/Seguro/CRLV)
+        - (SEL. RULE: Quando a pendência pertence ao cadastro legal do veículo).
+        - OP. 2.2.A.1: Tocar no card do documento veicular sinalizado.
+        - OP. 2.2.A.2: Inserir a nova data de validade e anexar o comprovante.
+        - OP. 2.2.A.3: Tocar em "Confirmar Regularização" (badge altera para verde).
+      - METHOD 2.2.B: Atualizar CNH de Motorista Alocado
+        - (SEL. RULE: Quando o alerta aponta vencimento da habilitação do condutor).
+        - OP. 2.2.B.1: Tocar no registro do motorista na lista de pendências.
+        - OP. 2.2.B.2: Inserir a nova data de validade da CNH.
+        - OP. 2.2.B.3: Tocar em "Salvar Atualização" para remover o alerta.
+================================================================================

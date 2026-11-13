@@ -56,4 +56,3 @@ Funcionalidades cobertas:
         - OP. 2.2.B.1: Tocar no registro do motorista na lista de pendências.
         - OP. 2.2.B.2: Inserir a nova data de validade da CNH.
         - OP. 2.2.B.3: Tocar em "Salvar Atualização" para remover o alerta.
-================================================================================

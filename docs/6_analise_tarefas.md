@@ -1,6 +1,6 @@
-# DOCUMENTAÇÃO DE ENGENHARIA DE USABILIDADE E ANÁLISE DE TAREFAS - AVL CONTROL
+## DOCUMENTAÇÃO DE ENGENHARIA DE USABILIDADE E ANÁLISE DE TAREFAS - AVL CONTROL
 
-# 1. HTA (Hierarchical Task Analysis) — Operação de Frota em Obra
+## 1. HTA (Hierarchical Task Analysis) — Operação de Frota em Obra
 
 Funcionalidades cobertas: 
 1. Cadastro e Alocação de Veículo em Obra
@@ -32,7 +32,7 @@ Funcionalidades cobertas:
                 +--- [2.3.1]: Tocar em "Tirar Foto do Canhoto" via câmera, OU
                 +--- [2.3.2]: Tocar em "Escolher da Galeria" e selecionar o arquivo.
 
-# GOMS — Análise de BI e Regularização Documental
+## GOMS — Análise de BI e Regularização Documental
 
 Funcionalidades cobertas: 
 3. Geração e Exportação de Relatórios BI

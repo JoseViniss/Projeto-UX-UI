@@ -6,19 +6,7 @@ Funcionalidades cobertas:
 1. Cadastro e Alocação de Veículo em Obra
 2. Registro de Abastecimento e Canhoto Digital
 
-[0. Gerenciar Operação de Veículo Locado em Obra]
-                                        Plano: 1 > 2
-                                       /            \
-                                      /              \
-      [1. Cadastrar e Alocar Veículo em Obra]      [2. Registrar Abastecimento e Canhoto]
-                 Plano: 1 > 2 > 3                             Plano: 1 > 2 > 3
-                /        |        \                          /        |        \
-               /         |         \                        /         |         \
-[1.1 Acessar Módulo] [1.2 Preencher Dados] [1.3 Salvar]  [2.1 Abrir Financeiro] [2.2 Lançar Consumo] [2.3 Anexar Canhoto]
-                         Plano: 1+2+3+4                                              Plano: 1+2+3           Plano: 1 / 2
-                        /   |      |   \                                            /      |      \        /            \
-                       /    |      |    \                                          /       |       \      /              \
-         [1.2.1 Placa/Mod] [1.2.2 Horím.] [1.2.3 Obra] [1.2.4 Motorista]   [2.2.1 Veículo] [2.2.2 Litros/R$] [2.2.3 Odôm.]  [2.3.1 Capturar Câmera] [2.3.2 Upload Galeria]
+<img width="2112" height="1752" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/977b74f9-cee4-4ab5-9da4-e3419063e24f" />
 
 ## GOMS — Análise de BI e Regularização Documental
 

@@ -1,0 +1,36 @@
+import {sum,today,num,dateLabel,addMonths} from '../utils/format.js';
+import {activeTrip as trip,pendingCheck as check,paid,balance,invoiceStatus,oil} from './calculations.js';
+export const reportTypes={vehicle:'Gastos e faturamento por veículo',monthly:'Faturamento mensal',category:'Despesas por categoria',oil:'Troca de óleo',available:'Veículos disponíveis',checklists:'Checklists de retorno',pending:'Checklists pendentes',invoices:'Faturamentos e parcelas',payments:'Recebimentos realizados',overdue:'Parcelas vencidas',expenses:'Despesas detalhadas'};
+export function createSelectors(db,ui){
+const getVehicle = id => db.vehicles.find(v=>v.id===id);
+const vehicleName=id=>getVehicle(id)?.plate || '—';
+const clientName=id=>db.clients.find(c=>c.id===id)?.name || 'Sem cliente';
+const workName=id=>db.works.find(w=>w.id===id)?.name || 'Pátio';
+const driverName=id=>db.drivers.find(d=>d.id===id)?.name || '—';
+const activeTrip=id=>trip(id,db); const pendingCheck=id=>check(id,db);
+function vehicleStatus(v){if(v.status!=='Disponível')return v.status;if(ui.role==='locador')return v.clientId?'Locado':'Disponível';return activeTrip(v.id)?'Em obra':'Disponível';}
+function inRange(date){return date>=ui.from&&date<=ui.to;}
+function selectedVehicles(){return db.vehicles.filter(v=>(ui.vehicle==='all'||v.id===ui.vehicle)&&(ui.client==='all'||v.clientId===ui.client||db.invoices.some(i=>i.vehicleId===v.id&&i.role===ui.role&&i.clientId===ui.client&&inRange(i.issued))||db.expenses.some(e=>e.vehicleId===v.id&&e.role===ui.role&&e.clientId===ui.client&&inRange(e.date)))&&(ui.work==='all'||db.trips.some(t=>t.vehicleId===v.id&&t.workId===ui.work&&t.start<=ui.to&&(!t.end||t.end>=ui.from))));}
+function selectedExpenses(){return db.expenses.filter(e=>e.role===ui.role&&inRange(e.date)&&(ui.vehicle==='all'||e.vehicleId===ui.vehicle)&&(ui.category==='all'||e.category===ui.category)&&(ui.work==='all'||e.workId===ui.work)&&(ui.client==='all'||e.clientId===ui.client));}
+function selectedInvoices(){return db.invoices.filter(i=>i.role===ui.role&&(ui.vehicle==='all'||i.vehicleId===ui.vehicle)&&(ui.client==='all'||i.clientId===ui.client)&&(ui.work==='all'||i.workId===ui.work)&&(ui.invoiceStatus==='all'||invoiceStatus(i)===ui.invoiceStatus));}
+function metrics(){const invoices=selectedInvoices();return {billed:sum(invoices.filter(i=>inRange(i.issued)),'amount'),received:invoices.reduce((s,i)=>s+sum(i.payments.filter(p=>inRange(p.date)),'amount'),0),expense:sum(selectedExpenses(),'amount'),due:invoices.filter(i=>inRange(i.due)).reduce((s,i)=>s+balance(i),0),overdue:invoices.filter(i=>inRange(i.due)&&invoiceStatus(i)==='Vencido').reduce((s,i)=>s+balance(i),0)};}
+function financialRows(){const expenses=selectedExpenses(),invoices=selectedInvoices();return selectedVehicles().map(v=>{const billed=sum(invoices.filter(i=>i.vehicleId===v.id&&inRange(i.issued)),'amount');const expense=sum(expenses.filter(e=>e.vehicleId===v.id),'amount');return {id:v.id,label:v.plate,billed,expense,result:billed-expense};});}
+function categoryRows(){return db.categories.map(c=>({label:c,value:sum(selectedExpenses().filter(e=>e.category===c),'amount')})).filter(x=>x.value>0).sort((a,b)=>b.value-a.value);}
+function monthlyRows(){const result=[];let date=ui.from.slice(0,7)+'-01';let count=0;const invoices=selectedInvoices();while(date<=ui.to&&count++<120){const month=date.slice(0,7);result.push({label:month,value:sum(invoices.filter(i=>i.issued.startsWith(month)&&inRange(i.issued)),'amount')});date=addMonths(date,1);}return result;}
+function oilRows(){return selectedVehicles().sort((a,b)=>oil(a).left-oil(b).left);}
+function reportData(){let headers=[],rows=[],note='';const inv=selectedInvoices();switch(ui.report){
+ case 'vehicle':headers=['Veículo','Faturado (R$)','Gastos (R$)','Resultado (R$)'];rows=financialRows().map(r=>[r.label,(r.billed/100).toFixed(2),(r.expense/100).toFixed(2),(r.result/100).toFixed(2)]);break;
+ case 'monthly':headers=['Mês','Faturado (R$)'];rows=monthlyRows().map(r=>[r.label,(r.value/100).toFixed(2)]);break;
+ case 'category':headers=['Categoria','Gastos (R$)'];rows=categoryRows().map(r=>[r.label,(r.value/100).toFixed(2)]);break;
+ case 'oil':headers=['Veículo','Leitura atual','Última troca','Próxima troca','Restantes','Unidade'];rows=oilRows().map(v=>[v.plate,v.meter,v.lastOil,oil(v).next,oil(v).left,v.unit]);note='Fotografia atual da frota; as datas não alteram os medidores.';break;
+ case 'available':headers=['Veículo','Modelo','Categoria','Situação','Checklist'];rows=selectedVehicles().filter(v=>vehicleStatus(v)==='Disponível').map(v=>[v.plate,v.model,v.category,'Disponível',pendingCheck(v.id)?'Pendente · nova saída bloqueada':'Em dia']);note='Disponibilidade atual, independente do período.';break;
+ case 'pending':case 'checklists':headers=['Veículo','Obra','Retorno','Situação','Percurso','Unidade','Consumo (L)','Integridade'];rows=db.checklists.filter(c=>(ui.report!=='pending'||!c.done)&&inRange(c.date)&&selectedVehicles().some(v=>v.id===c.vehicleId)&&(ui.work==='all'||db.trips.find(t=>t.id===c.tripId)?.workId===ui.work)).map(c=>{const t=db.trips.find(t=>t.id===c.tripId);return [vehicleName(c.vehicleId),workName(t.workId),dateLabel(c.date),c.done?'Concluído':'Pendente',c.done?c.distance:'',getVehicle(c.vehicleId).unit,c.done?c.consumed:'',c.done?c.damage?'Avaria':'Ok':'A conferir'];});break;
+ case 'payments':headers=['Cliente','Veículo','Parcela','Recebido em','Valor (R$)'];rows=inv.flatMap(i=>i.payments.filter(p=>inRange(p.date)).map(p=>[clientName(i.clientId),vehicleName(i.vehicleId),i.installment,dateLabel(p.date),(p.amount/100).toFixed(2)]));break;
+ case 'overdue':case 'invoices':headers=['Cliente','Veículo','Descrição','Emissão','Vencimento','Parcela','Faturado (R$)','Recebido (R$)','Saldo (R$)','Status'];rows=inv.filter(i=>inRange(i.due)&&(ui.report!=='overdue'||invoiceStatus(i)==='Vencido')).sort((a,b)=>a.due.localeCompare(b.due)).map(i=>[clientName(i.clientId),vehicleName(i.vehicleId),i.description,dateLabel(i.issued),dateLabel(i.due),i.installment,(i.amount/100).toFixed(2),(paid(i)/100).toFixed(2),(balance(i)/100).toFixed(2),invoiceStatus(i)]);note='Período aplicado ao vencimento das parcelas; saldos atualizados até hoje.';break;
+ case 'expenses':headers=['Data','Veículo','Obra','Categoria','Descrição','Litros','Valor (R$)'];rows=selectedExpenses().map(e=>[dateLabel(e.date),vehicleName(e.vehicleId),workName(e.workId),e.category,e.description,e.liters,(e.amount/100).toFixed(2)]);break;
+ }return {title:reportTypes[ui.report],headers,rows,note};}
+
+function reportContext(){return `${ui.role==='locador'?'Locador':'Locatário'} · ${dateLabel(ui.from)} a ${dateLabel(ui.to)} · veículo: ${ui.vehicle==='all'?'todos':vehicleName(ui.vehicle)} · categoria de despesa: ${ui.category==='all'?'todas':ui.category} · cliente: ${ui.client==='all'?'todos':clientName(ui.client)} · obra: ${ui.work==='all'?'todas':workName(ui.work)} · status: ${ui.invoiceStatus==='all'?'todos':ui.invoiceStatus}`;}
+
+return {getVehicle,vehicleName,clientName,workName,driverName,activeTrip,pendingCheck,vehicleStatus,inRange,selectedVehicles,selectedExpenses,selectedInvoices,metrics,financialRows,categoryRows,monthlyRows,oilRows,reportData,reportContext};
+}
